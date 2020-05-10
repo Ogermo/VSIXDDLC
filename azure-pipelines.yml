@@ -7,7 +7,7 @@ trigger:
 - '*' # Run the pipeline for each commit
 
 pool:
-  vmImage: 'ubuntu-latest' # Windows Server 2019 with Visual Studio 2019
+  vmImage: 'windows-2019' # Windows Server 2019 with Visual Studio 2019
 
 variables:
   # patch will be incremented at each build. This is useful to create a unique build version.
