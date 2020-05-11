@@ -21,29 +21,6 @@ name: 1.0.$(patch) # Set the value of $(Build.BuildNumber)
 
 steps:
 
-
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-    maximumCpuCount: true
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-# Publish all needed files for the Release pipeline
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: |
-      README.md
-      build/**
-      **/*.vsix
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'drop'
