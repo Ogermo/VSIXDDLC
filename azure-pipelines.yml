@@ -50,7 +50,7 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'drop'
-    targetPath: '$(Pipeline.Workspace)'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
     
 #trigger:
 #- master
