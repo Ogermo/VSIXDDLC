@@ -50,9 +50,8 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'drop'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    targetPath: '$(Pipeline.Workspace)'
     
-- script: echo '$(Build.ArtifactStagingDirectory)'
 #trigger:
 #- master
 
