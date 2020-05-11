@@ -51,6 +51,8 @@ steps:
   inputs:
     artifactName: 'drop'
     targetPath: '$(Build.ArtifactStagingDirectory)'
+    
+- script: echo '$(Build.ArtifactStagingDirectory)'
 #trigger:
 #- master
 
